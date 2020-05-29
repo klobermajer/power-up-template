@@ -314,6 +314,7 @@ TrelloPowerUp.initialize({
       state: JSON.stringify({ hello: 'world' }),
     });
     console.log(jwt.settledValue());
+    window.trelloJwt = jwt;
 
     return [{
       // we can either provide a button that has a callback function

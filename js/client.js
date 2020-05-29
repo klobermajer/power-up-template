@@ -313,8 +313,8 @@ TrelloPowerUp.initialize({
     const jwt = await t.jwt({
       state: JSON.stringify({ hello: 'world' }),
     });
-    console.log(jwt.settledValue);
-    window.trelloJwt = jwt;
+    console.log(jwt);
+    console.log(Object.keys(jwt))
 
     return [{
       // we can either provide a button that has a callback function

@@ -193,6 +193,7 @@ var boardButtonCallback = function(t){
 };
 
 var cardButtonCallback = function(t){
+console.log(t.jwt());
   // Trello Power-Up Popups are actually pretty powerful
   // Searching is a pretty common use case, so why reinvent the wheel
   var items = ['acad', 'arch', 'badl', 'crla', 'grca', 'yell', 'yose'].map(function(parkCode){

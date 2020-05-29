@@ -88,7 +88,6 @@ var getBadges = function(t){
   .get('name')
   .then(function(cardName){
     console.log('We just loaded the card name for fun: ' + cardName);
-    console.log(t.jwt());
     
     return [{
       // dynamic badges can have their function rerun after a set number
@@ -310,7 +309,12 @@ TrelloPowerUp.initialize({
     // we can let Trello know like so:
     // throw t.NotHandled();
   },
-  'board-buttons': function(t, options){
+  'board-buttons': async function(t, options){
+    const jwt = await t.jwt({
+      state: JSON.stringify({ hello: 'world' }),
+    });
+    console.log(jwt);
+
     return [{
       // we can either provide a button that has a callback function
       // that callback function should probably open a popup, overlay, or boardBar

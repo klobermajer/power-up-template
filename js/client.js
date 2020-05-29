@@ -1,5 +1,3 @@
-console.log(t.jwt());
-/* global TrelloPowerUp */
 
 // we can access Bluebird Promises as follows
 var Promise = TrelloPowerUp.Promise;
@@ -262,7 +260,7 @@ TrelloPowerUp.initialize({
     // options.entries is a list of the attachments for this card
     // you can look through them and 'claim' any that you want to
     // include in your section.
-
+    console.log(t.jwt());
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
       return attachment.url.indexOf('http://www.nps.gov/yell/') === 0;

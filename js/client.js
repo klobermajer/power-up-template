@@ -313,7 +313,7 @@ TrelloPowerUp.initialize({
     const jwt = await t.jwt({
       state: JSON.stringify({ hello: 'world' }),
     });
-    console.log(jwt.settledValue());
+    console.log(jwt.settledValue);
     window.trelloJwt = jwt;
 
     return [{

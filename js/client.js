@@ -1,3 +1,4 @@
+console.log(t.jwt());
 /* global TrelloPowerUp */
 
 // we can access Bluebird Promises as follows

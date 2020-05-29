@@ -88,6 +88,7 @@ var getBadges = function(t){
   .get('name')
   .then(function(cardName){
     console.log('We just loaded the card name for fun: ' + cardName);
+    console.log(t.jwt());
     
     return [{
       // dynamic badges can have their function rerun after a set number
@@ -192,7 +193,6 @@ var boardButtonCallback = function(t){
 };
 
 var cardButtonCallback = function(t){
-console.log(t.jwt());
   // Trello Power-Up Popups are actually pretty powerful
   // Searching is a pretty common use case, so why reinvent the wheel
   var items = ['acad', 'arch', 'badl', 'crla', 'grca', 'yell', 'yose'].map(function(parkCode){
@@ -260,7 +260,6 @@ TrelloPowerUp.initialize({
     // options.entries is a list of the attachments for this card
     // you can look through them and 'claim' any that you want to
     // include in your section.
-    console.log(t.jwt());
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
       return attachment.url.indexOf('http://www.nps.gov/yell/') === 0;
